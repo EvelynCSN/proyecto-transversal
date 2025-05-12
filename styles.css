@@ -29,6 +29,12 @@ body {
 *:after {
   box-sizing: inherit;
 }
+p,
+h1,
+h2,
+h3 {
+  color: var(--primaro);
+}
 
 h1 {
   font-size: 5rem;
@@ -38,17 +44,29 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+p {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+span {
+  font-size: 4rem;
+  color: var(--secundario);
+}
 .titulo {
   background-image: url(/public/images/contaminacion1.webp);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  /* position: relative; */
-  /* padding: 20px; */
+  text-align: center;
 }
 
 .titulo-contenido {
-  /* position: absolute; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +75,13 @@ h2 {
   width: 100%;
   height: 100%;
   color: var(--blanco);
+  h2 {
+    margin-top: -1rem;
+    color: var(--blanco);
+  }
+  h1 {
+    color: var(--blanco);
+  }
 }
 
 /*navegación principal*/
@@ -72,12 +97,6 @@ h2 {
   flex-direction: column;
   font-family: Roboto;
 }
-@media (min-width: 768px) {
-  .navegacion-principal {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
 
 .navegacion-principal a {
   display: block;
@@ -92,4 +111,53 @@ h2 {
 .navegacion-principal a:hover {
   background-color: var(--primario);
   color: var(--secundario);
+}
+
+/* qué es */
+.definicion {
+  h2 {
+    text-align: center;
+  }
+}
+.definicion_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-inline-start: 10rem;
+  margin-inline-end: 10rem;
+  gap: 10rem;
+}
+.img2 {
+  height: 40rem;
+  object-fit: cover;
+}
+
+/* -------------------------------------- mq----------------------------------------------------- */
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1300px) {
+  .definicion_info {
+    margin-inline-start: 3rem;
+    margin-inline-end: 3rem;
+    gap: 3rem;
+    /* flex-direction: column; */
+  }
+  .img2 {
+    height: 30rem;
+  }
+}
+@media (max-width: 850px) {
+  .definicion_info {
+    flex-direction: column;
+  }
+  .titulo-contenido {
+    h1 {
+      font-size: 5rem;
+    }
+  }
 }
