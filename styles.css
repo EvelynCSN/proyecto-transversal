@@ -2,6 +2,7 @@
   --primaro: #23214b;
   --secundario: #ed5555;
   --blanco: #fff;
+  --gris: #757575;
 }
 
 /* globales */
@@ -38,6 +39,7 @@ h3 {
 
 h1 {
   font-size: 5rem;
+  letter-spacing: 0.25rem;
 }
 
 h2 {
@@ -81,6 +83,19 @@ span {
   }
   h1 {
     color: var(--blanco);
+  }
+}
+
+.boton-inicio {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  padding: 1rem 1.16rem 1rem 1.16rem;
+  border-radius: 100%;
+  background-color: var(--secundario);
+  img {
+    width: 3rem;
   }
 }
 
@@ -131,12 +146,78 @@ span {
   height: 40rem;
   object-fit: cover;
 }
+/* causas */
+.causas-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 6rem 5rem;
+  column-gap: 5rem;
+  gap: 5rem;
+}
+.card1,
+.card2 {
+  padding: 2rem;
+  h2,
+  p {
+    color: var(--blanco);
+    text-align: center;
+  }
+}
+.card2 {
+  background-color: var(--primaro);
+}
+.card1 {
+  background-color: var(--secundario);
+}
+
+/* consecuencias */
+.consecuencias {
+  background-color: var(--gris);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10rem;
+  text-align: center;
+}
+.consecuencia-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  margin-top: 5rem;
+}
+.card {
+  p {
+    color: var(--gris);
+    font-weight: bold;
+  }
+}
+
+/* soluciones */
+.soluciones-contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
+  overflow: hidden;
+}
+.solucion-info {
+  max-width: 60rem;
+}
+.img3 {
+  width: 50rem;
+  max-height: 30rem;
+  object-fit: cover;
+}
 
 /* -------------------------------------- mq----------------------------------------------------- */
 @media (min-width: 768px) {
   .navegacion-principal {
     flex-direction: row;
     justify-content: space-around;
+  }
+  .boton-inicio {
+    visibility: hidden;
   }
 }
 
@@ -150,7 +231,12 @@ span {
   .img2 {
     height: 30rem;
   }
+  .soluciones-contenido {
+    display: flex;
+    flex-direction: column;
+  }
 }
+
 @media (max-width: 850px) {
   .definicion_info {
     flex-direction: column;
@@ -159,5 +245,34 @@ span {
     h1 {
       font-size: 5rem;
     }
+  }
+  .causas-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3rem 0.1rem;
+    column-gap: 0.8rem;
+    gap: 0.8rem;
+  }
+  .card1,
+  .card2 {
+    margin: 2rem 6rem;
+    /* padding: 2rem; */
+  }
+  .consecuencia-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .consecuencias {
+    padding: 5rem;
+  }
+  .solucion-info {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .navegacion-principal a {
+    padding: 0.6rem;
+  }
+  .nav-bg {
+    position: static;
   }
 }
