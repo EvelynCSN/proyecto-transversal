@@ -94,6 +94,7 @@ span {
   padding: 1rem 1.16rem 1rem 1.16rem;
   border-radius: 100%;
   background-color: var(--secundario);
+  z-index: 10;
   img {
     width: 3rem;
   }
