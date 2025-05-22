@@ -250,6 +250,11 @@ span {
   border: 0;
 }
 /* como ayudar*/
+.ayudar-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .cards {
   display: flex;
   align-items: center;
