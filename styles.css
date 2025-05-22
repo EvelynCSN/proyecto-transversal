@@ -256,12 +256,12 @@ span {
   flex-direction: column;
   text-align: center;
   margin: 8rem;
+}
 
-  img {
-    height: 50rem;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.286);
-    margin-bottom: 1rem;
-  }
+.cards img {
+  height: 50rem;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.286);
+  margin-bottom: 1rem;
 }
 
 /* footer */
@@ -318,9 +318,10 @@ footer {
   }
   .cards {
     margin: 2rem;
-    img {
-      height: 40rem;
-    }
+  }
+
+  .cards img {
+    height: 40rem;
   }
 }
 
@@ -366,17 +367,14 @@ footer {
     margin: 6rem 5rem;
     column-gap: 5rem;
     gap: 5rem;
-    img {
-      height: 20rem;
-    }
   }
-
-  .cards {
-    img {
-      height: 15rem;
-    }
-    .imagen {
-      min-height: 30rem;
-    }
+  .ayudar-cards img {
+    height: 20rem;
+  }
+  .cards img {
+    height: 15rem;
+  }
+  .imagen {
+    min-height: 30rem;
   }
 }
